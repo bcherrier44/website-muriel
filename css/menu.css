@@ -11,7 +11,7 @@
     height: 100%;
 }
 
-/* Positionnement des menus dans les coins */
+/* Positionnement des menus autour de l'image */
 .menu {
     width: 150px;
     height: 60px;
@@ -27,58 +27,64 @@
     transition: background-color 0.3s;
 }
 
+/* Changement de couleur au survol des menus */
 .menu:hover {
     opacity: 0.9;
 }
 
 /* Menu 1 : en haut à gauche */
 .top-left {
-    top: 10%;
-    left: 10%;
+    position: absolute;
+    top: -40px;
+    left: -40px;
     background-color: #4CAF50; /* Vert */
 }
 
 /* Menu 2 : en haut à droite */
 .top-right {
-    top: 10%;
-    right: 10%;
+    position: absolute;
+    top: -40px;
+    right: -40px;
     background-color: #FF5722; /* Orange */
 }
 
 /* Menu 3 : en bas à gauche */
 .bottom-left {
-    bottom: 10%;
-    left: 10%;
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
     background-color: #2196F3; /* Bleu */
 }
 
 /* Menu 4 : en bas à droite */
 .bottom-right {
-    bottom: 10%;
-    right: 10%;
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
     background-color: #9C27B0; /* Violet */
 }
 
 /* Bouton Menu en haut à gauche (arrondi) */
 .menu-btn {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     background-color: #333;
     color: white;
     border: none;
-    padding: 20px;  /* Augmenter la taille du bouton */
-    font-size: 24px; /* Agrandir la taille du texte pour mieux s'adapter */
+    padding: 15px 25px; /* Taille du bouton */
+    font-size: 20px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%; /* Arrondi du bouton */
-    width: 60px; /* Agrandir la taille du bouton */
-    height: 60px; /* Agrandir la taille du bouton */
+    border-radius: 30px; /* Bouton arrondi */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
 
+/* Survol du bouton menu */
 .menu-btn:hover {
     background-color: #444;
 }
@@ -88,7 +94,7 @@
     display: none;
     position: absolute;
     top: 70px;
-    left: 10px;
+    left: 20px;
     background-color: #333;
     padding: 10px;
     border-radius: 5px;

@@ -1,22 +1,22 @@
-// Fonction pour charger un menu dans la page principale
-function loadMenu(menuFile) {
-    fetch(menuFile)
-        .then(response => response.text())
-        .then(html => {
-            // Charger le contenu du menu dans la page principale
-            document.getElementById('content-container').innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Erreur de chargement du menu:', error);
-        });
-}
-
-// Fonction pour afficher/masquer le menu en haut à gauche (menu déroulant)
+// Fonction pour afficher/masquer le menu déroulant
 function toggleMenu() {
-    var menu = document.getElementById('dropdown-menu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    if (dropdownMenu.style.display === "block") {
+        dropdownMenu.style.display = "none";
+    } else {
+        dropdownMenu.style.display = "block";
+    }
 }
 
+// Fonction pour charger un menu spécifique
+function loadMenu(menuPath) {
+    fetch(menuPath)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+}
 
 // Fonction pour revenir à la page d'accueil
 function goHome() {

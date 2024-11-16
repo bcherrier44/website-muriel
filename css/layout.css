@@ -27,16 +27,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 1000px; /* Réduit la largeur pour mieux s'adapter */
     position: relative;
+    margin-top: 70px; /* Ajuste l'image pour qu'elle ne soit pas sous le titre */
 }
 
 /* Image d'accueil */
 .home-image {
-    max-width: 100%;
+    width: 80%; /* Ajuste la largeur de l'image */
     height: auto;
-    display: block;
-    margin: 0 auto;
-    max-height: 500px; /* Reduit la hauteur maximale de l'image */
+    max-height: 500px;
 }
