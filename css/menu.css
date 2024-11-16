@@ -67,13 +67,16 @@
     background-color: #333;
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 20px;
+    padding: 20px;  /* Augmenter la taille du bouton */
+    font-size: 24px; /* Agrandir la taille du texte pour mieux s'adapter */
     cursor: pointer;
     z-index: 10;
     border-radius: 50%; /* Arrondi du bouton */
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Agrandir la taille du bouton */
+    height: 60px; /* Agrandir la taille du bouton */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-btn:hover {
