@@ -7,7 +7,7 @@
 
 /* Style pour la bannière */
 .banner {
-    background-color: #007BFF;
+    background-color: #71d443;
     color: white;
     text-align: center;
     padding: 20px;
@@ -52,8 +52,12 @@ main {
     line-height: 1.6;
 }
 
-section {
-    margin-bottom: 20px;
+.section {
+    display: none; /* Par défaut, les sections sont cachées */
+}
+
+.section.active {
+    display: block; /* La section active est affichée */
 }
 
 section h2 {
