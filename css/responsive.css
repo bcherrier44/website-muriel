@@ -1,7 +1,10 @@
-/* Responsivité pour les petits écrans */
+/* responsive.css */
+
 @media (max-width: 768px) {
     .menu-container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu {

@@ -9,17 +9,12 @@
     <link rel="stylesheet" href="css/base.css">       <!-- Base styles -->
     <link rel="stylesheet" href="css/layout.css">     <!-- Layout styles -->
     <link rel="stylesheet" href="css/menu.css">       <!-- Menu styles -->
-    <link rel="stylesheet" href="css/banner.css">     <!-- Banner styles -->
     <link rel="stylesheet" href="css/responsive.css"> <!-- Responsive styles -->
 </head>
 <body>
-    <!-- En-tête du site -->
-    <header>
-        <!-- Bannière principale -->
-        <header class="banner">
-            <img src="images/banniere2.jpeg" alt="Bannière" class="banner-image">
-            <!-- <h1>Mon site perma</h1> -->
-        </header>
+
+    <!-- Bouton menu pour charger un menu -->
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
 
     <!-- Contenu principal de la page d'accueil -->
     <div id="content-container">
@@ -29,19 +24,16 @@
         <div class="image-container">
             <img src="images/banniere2.jpeg" alt="Image d'accueil" class="home-image">
             
-            <!-- Les menus sont autour de l'image -->
-            <div class="menu-container">
-                <div class="menu" id="menu1" onclick="loadMenu('menu1.html')">Menu 1</div>
-                <div class="menu" id="menu2" onclick="loadMenu('menu2.html')">Menu 2</div>
-                <div class="menu" id="menu3" onclick="loadMenu('menu3.html')">Menu 3</div>
-                <div class="menu" id="menu4" onclick="loadMenu('menu4.html')">Menu 4</div>
+                <!-- Boutons de menus positionnés dans les coins -->
+                <div class="menu top-left" id="menu1" onclick="loadMenu('menus/menu1.html')">Menu 1</div>
+                <div class="menu top-right" id="menu2" onclick="loadMenu('menus/menu2.html')">Menu 2</div>
+                <div class="menu bottom-left" id="menu3" onclick="loadMenu('menus/menu3.html')">Menu 3</div>
+                <div class="menu bottom-right" id="menu4" onclick="loadMenu('menus/menu4.html')">Menu 4</div>
             </div>
         </div>
     </div>
 
-    <!-- Bouton menu pour charger un menu -->
-    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
     <script src="js/script.js"></script> <!-- Inclusion du fichier JavaScript -->
+    
 </body>
 </html>

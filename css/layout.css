@@ -1,4 +1,6 @@
-/* Conteneur principal de la page d'accueil */
+/* layout.css */
+
+/* Conteneur de la page d'accueil */
 #content-container {
     display: flex;
     flex-direction: column;
@@ -10,7 +12,7 @@
     position: relative;
 }
 
-/* Image d'accueil */
+/* Conteneur de l'image */
 .image-container {
     display: flex;
     justify-content: center;
@@ -20,6 +22,7 @@
     position: relative;
 }
 
+/* Image d'accueil */
 .home-image {
     max-width: 100%;
     height: auto;
@@ -27,18 +30,20 @@
     margin: 0 auto;
 }
 
-/* Style des menus autour de l'image */
+/* Conteneur des menus */
 .menu-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    z-index: 1;
+    height: 100%;
 }
 
+/* Positionnement des menus dans les coins */
 .menu {
     width: 150px;
     padding: 20px;
@@ -47,6 +52,27 @@
     color: white;
     text-align: center;
     cursor: pointer;
+    position: absolute;
+}
+
+.top-left {
+    top: 10%;
+    left: 10%;
+}
+
+.top-right {
+    top: 10%;
+    right: 10%;
+}
+
+.bottom-left {
+    bottom: 10%;
+    left: 10%;
+}
+
+.bottom-right {
+    bottom: 10%;
+    right: 10%;
 }
 
 .menu:hover {
