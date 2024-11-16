@@ -1,21 +1,23 @@
-// Sélection des liens du menu
+// Sélectionner tous les liens de menu
 const menuLinks = document.querySelectorAll('.menu ul li a');
-// Sélection des sections
+
+// Sélectionner toutes les sections
 const sections = document.querySelectorAll('.section');
 
-// Ajouter un écouteur d'événement à chaque lien
+// Ajouter un événement de clic à chaque lien de menu
 menuLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', function (e) {
         e.preventDefault(); // Empêcher le comportement par défaut du lien
 
-        const targetId = link.getAttribute('data-target'); // Obtenir l'ID cible
+        // Récupérer l'ID de la section ciblée
+        const targetId = this.getAttribute('data-target');
 
-        // Désactiver toutes les sections
+        // Masquer toutes les sections
         sections.forEach(section => {
             section.classList.remove('active');
         });
 
-        // Activer la section ciblée
+        // Afficher la section ciblée
         document.getElementById(targetId).classList.add('active');
     });
 });
