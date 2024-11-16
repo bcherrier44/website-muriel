@@ -37,5 +37,6 @@ document.addEventListener('DOMContentLoaded', loadHomeContent);
 // Gérer l'affichage du menu déroulant
 const menuBtn = document.getElementById('menu-btn');
 menuBtn.addEventListener('click', function() {
-    document.querySelector('.menu-container').classList.toggle('active');
+    const menuContainer = document.querySelector('.menu-container');
+    menuContainer.classList.toggle('active');  // Toggle l'affichage des menus
 });

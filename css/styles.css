@@ -4,8 +4,9 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     background-color: #f0f0f0;
     position: relative;
@@ -18,7 +19,7 @@ body {
     position: relative; /* Position relative pour positionner l'image */
     align-items: center; /* Centrer verticalement */
     justify-content: center; /* Centrer horizontalement */
-    height: 200px; /* Hauteur définie pour la bannière */
+    height: 250px; /* Hauteur définie pour la bannière */
 }
 
 /* Style pour l'image de la bannière */
@@ -57,6 +58,7 @@ body {
     text-align: center;
     width: 100%;
     max-width: 1200px;
+    position: relative;
 }
 
 /* Style des sections de menu */
@@ -65,29 +67,58 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 30px;
+    width: 100%;
+    position: absolute;
+    top: 60%; /* Placer les menus autour de l'image */
+    z-index: 1;
 }
 
+/* Style de chaque menu */
 .menu {
     display: inline-block;
-    width: 250px;
+    width: 200px;
     padding: 20px;
     border-radius: 15px;
     margin: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #4CAF50; /* Exemple : menu avec fond vert */
+    background-color: #4CAF50; /* Fond par défaut */
 }
 
-/* Les menus peuvent changer de couleur dynamiquement */
-.menu1 { background-color: #4CAF50; }
-.menu2 { background-color: #2196F3; }
-.menu3 { background-color: #FF5722; }
-.menu4 { background-color: #FFC107; }
-
+/* Style du titre du menu */
 .menu h2 {
     color: white;
     font-size: 24px;
     font-weight: bold;
+}
+
+/* Menu au survol : effet d'opacité */
+.menu:hover {
+    opacity: 0.9;
+}
+
+/* Menu 1 */
+.menu1 { background-color: #4CAF50; }
+/* Menu 2 */
+.menu2 { background-color: #2196F3; }
+/* Menu 3 */
+.menu3 { background-color: #FF5722; }
+/* Menu 4 */
+.menu4 { background-color: #FFC107; }
+
+/* Style pour l'image de la page d'accueil */
+.image-container {
+    margin: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.home-image {
+    width: 50%; /* Réduire la taille de l'image */
+    max-width: 500px; /* Limiter la largeur de l'image */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Responsivité pour les petits écrans */
@@ -98,6 +129,11 @@ body {
     }
 
     .menu {
-        width: 80%;
+        width: 80%; /* Les menus seront plus larges sur les petits écrans */
+    }
+
+    /* Ajuster la taille de la bannière pour les petits écrans */
+    .banner {
+        height: 150px;
     }
 }
