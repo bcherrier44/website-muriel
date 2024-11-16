@@ -17,13 +17,14 @@
     align-items: center; /* Centrer verticalement */
     justify-content: center; /* Centrer horizontalement */
     gap: 20px; /* Espacement entre l'image et le texte */
+    height: 200px; /* Hauteur définie pour la bannière */
 }
 
 /* Style pour l'image de la bannière */
 .banner img {
-    height: 50px; /* Hauteur de l'image */
-    width: auto; /* Maintenir les proportions */
-    object-fit: contain; /* Ajuster l'image à l'intérieur de son conteneur */
+    width: 100%;      /* L'image occupe toute la largeur de son conteneur */
+    height: auto;     /* La hauteur est ajustée automatiquement */
+    object-fit: cover; /* Pour que l'image couvre toute la largeur sans être déformée */
 }
 
 /* Menu de navigation */
