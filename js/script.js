@@ -1,42 +1,33 @@
-// Fonction pour charger dynamiquement le contenu de la page d'accueil
-function loadHomeContent() {
-    fetch('home-content.html')  // Charger le contenu de la page d'accueil
+document.addEventListener("DOMContentLoaded", function() {
+    // Charger le contenu de la page d'accueil au démarrage
+    fetch('home-content/home-content.html')
         .then(response => response.text())
-        .then(html => {
-            document.getElementById('content-container').innerHTML = html;
-            setupMenuLinks();  // Réinitialiser les liens du menu après le chargement
+        .then(data => {
+            document.getElementById('home-content').innerHTML = data;
         })
-        .catch(err => console.log('Erreur de chargement du contenu : ', err));
-}
+        .catch(error => console.error("Erreur lors du chargement du contenu :", error));
 
-// Fonction pour configurer les liens de menu pour charger les menus dynamiquement
-function setupMenuLinks() {
-    const menuLinks = document.querySelectorAll('.menu-link');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault(); // Empêcher le comportement de lien par défaut
-            const menuName = e.target.dataset.menu;  // Récupérer le nom du menu
-            loadMenu(menuName);  // Charger le menu sélectionné
+    // Fonction pour charger le contenu des menus
+    const menuButtons = document.querySelectorAll('.menu');
+    menuButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const menuFile = button.getAttribute('data-menu');
+            loadMenuContent(menuFile);
         });
     });
-}
 
-// Fonction pour charger un menu dynamique
-function loadMenu(menuName) {
-    fetch(`menus/${menuName}.html`)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('content-container').innerHTML = html;
-        })
-        .catch(err => console.log('Erreur de chargement du menu : ', err));
-}
+    // Fonction pour charger le contenu d'un menu
+    function loadMenuContent(menuFile) {
+        fetch(`menus/${menuFile}`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('home-content').innerHTML = data;
+            })
+            .catch(error => console.error("Erreur lors du chargement du menu :", error));
+    }
 
-// Initialiser la page d'accueil au chargement de la page
-document.addEventListener('DOMContentLoaded', loadHomeContent);
-
-// Gérer l'affichage du menu déroulant
-const menuBtn = document.getElementById('menu-btn');
-menuBtn.addEventListener('click', function() {
-    const menuContainer = document.querySelector('.menu-container');
-    menuContainer.classList.toggle('active');  // Toggle l'affichage des menus
+    // Fonction pour afficher/masquer le menu
+    document.getElementById("menu-btn").addEventListener("click", function() {
+        alert("Menu cliqué ! (Fonction à implémenter)");
+    });
 });

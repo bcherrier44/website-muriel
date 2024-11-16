@@ -23,7 +23,19 @@
 
     <!-- Conteneur principal de la page d'accueil -->
     <div id="content-container">
-        <!-- Contenu de la page d'accueil, initialement chargé avec home-content.html -->
+        <!-- Chargement dynamique du contenu de la page d'accueil depuis un autre fichier HTML -->
+        <div id="home-content"></div>
+
+        <!-- Section de menus autour de l'image -->
+        <div class="image-container">
+            <img src="images/page_accueil2.jpeg" alt="Image d'accueil" class="home-image">
+            <div class="menu-container">
+                <div class="menu menu1" data-menu="menus/menu1.html">Menu 1</div>
+                <div class="menu menu2" data-menu="menus/menu2.html">Menu 2</div>
+                <div class="menu menu3" data-menu="menus/menu3.html">Menu 3</div>
+                <div class="menu menu4" data-menu="menus/menu4.html">Menu 4</div>
+            </div>
+        </div>
     </div>
 
     <script src="js/script.js"></script> <!-- Inclusion du fichier JavaScript -->
