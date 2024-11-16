@@ -13,10 +13,16 @@ function loadMenu(menuFile) {
 
 // Fonction pour afficher/masquer le menu en haut à gauche
 function toggleMenu() {
-    let menu = document.getElementById("menu-container");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
+    let menuContainer = document.querySelector('.menu-container');
+    if (menuContainer.style.display === "block") {
+        menuContainer.style.display = "none";
     } else {
-        menu.style.display = "block";
+        menuContainer.style.display = "flex";
     }
+}
+
+// Fonction pour revenir à la page d'accueil
+function goHome() {
+    // Revenir à la page d'accueil
+    window.location.href = 'index.html';
 }

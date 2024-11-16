@@ -45,36 +45,85 @@
 
 /* Positionnement des menus dans les coins */
 .menu {
-    width: 150px;
-    padding: 20px;
+    width: 180px;
+    height: 100px;
+    padding: 30px;
     border-radius: 15px;
-    background-color: #4CAF50; /* Couleur du fond du menu */
     color: white;
     text-align: center;
     cursor: pointer;
-    position: absolute;
-}
-
-.top-left {
-    top: 10%;
-    left: 10%;
-}
-
-.top-right {
-    top: 10%;
-    right: 10%;
-}
-
-.bottom-left {
-    bottom: 10%;
-    left: 10%;
-}
-
-.bottom-right {
-    bottom: 10%;
-    right: 10%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
 }
 
 .menu:hover {
     opacity: 0.9;
+}
+
+/* Menu 1 : en haut à gauche */
+.top-left {
+    top: 10%;
+    left: 10%;
+    background-color: #4CAF50; /* Vert */
+}
+
+/* Menu 2 : en haut à droite */
+.top-right {
+    top: 10%;
+    right: 10%;
+    background-color: #FF5722; /* Orange */
+}
+
+/* Menu 3 : en bas à gauche */
+.bottom-left {
+    bottom: 10%;
+    left: 10%;
+    background-color: #2196F3; /* Bleu */
+}
+
+/* Menu 4 : en bas à droite */
+.bottom-right {
+    bottom: 10%;
+    right: 10%;
+    background-color: #9C27B0; /* Violet */
+}
+
+/* Bouton Menu en haut à gauche */
+.menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-btn:hover {
+    background-color: #444;
+}
+
+/* Style pour les écrans mobiles */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        width: 70%;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    .home-image {
+        max-width: 90%;
+    }
 }
