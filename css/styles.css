@@ -131,3 +131,20 @@ body {
         height: 150px;
     }
 }
+
+/* Style pour le bouton "Retour à la page d'accueil" */
+.back-home-btn {
+    background-color: #4CAF50; /* Couleur du bouton */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Effet au survol du bouton */
+.back-home-btn:hover {
+    background-color: #45a049;
+}
