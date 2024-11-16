@@ -1,0 +1,103 @@
+/* Réinitialisation des marges et paddings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Bannière principale */
+.banner {
+    width: 100%;
+    padding: 20px; /* Espacement interne */
+    position: relative; /* Position relative pour positionner l'image */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    height: 200px; /* Hauteur définie pour la bannière */
+}
+
+/* Style pour l'image de la bannière */
+.banner img {
+    width: 100%;                 /* L'image prend toute la largeur du conteneur */
+    height: 100%;                /* L'image prend toute la hauteur du conteneur */
+    object-fit: cover;           /* L'image remplira le conteneur sans être déformée, mais peut être coupée */
+    object-position: center;     /* Centre l'image dans le conteneur */
+}
+
+/* Style du bouton Menu en haut à gauche */
+.menu-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #2196F3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Conteneur de la page d'accueil */
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Style des sections de menu */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.menu {
+    display: inline-block;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #4CAF50; /* Exemple : menu avec fond vert */
+}
+
+/* Les menus peuvent changer de couleur dynamiquement */
+.menu1 { background-color: #4CAF50; }
+.menu2 { background-color: #2196F3; }
+.menu3 { background-color: #FF5722; }
+.menu4 { background-color: #FFC107; }
+
+.menu h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        width: 80%;
+    }
+}

@@ -3,56 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Dynamique</title>
+    <title>Page d'accueil</title>
     <!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- En-tête du site -->
     <header>
         <!-- Bannière principale -->
         <div class="banner">
-            <img src="images/image_test.png" alt="Logo ou image de la bannière">
+            <img src="images/banniere2.jpeg" alt="Logo ou image de la bannière">
             <!-- <h1>Mon site perma</h1> -->
         </div>
-
-        <!-- Menu de navigation -->
-        <nav class="menu">
-            <ul>
-                <!-- Chaque lien a un attribut `data-target` qui correspond à l'ID de la section à afficher -->
-                <li><a href="#" data-target="menu1">Qui suis-je ?</a></li>
-                <li><a href="#" data-target="menu2">Mes valeurs</a></li>
-                <li><a href="#" data-target="menu3">Quelques projets</a></li>
-                <li><a href="#" data-target="menu4">Me contacter</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Contenu principal -->
-    <main>
-        <!-- Section liée à Menu 1 -->
-        <section id="menu1" class="section active">
-            <h2>Qui suis-je ?</h2>
-            <p>Voici le contenu du menu 1. Ajoutez ici votre contenu.</p>
-        </section>
-        <!-- Section liée à Menu 2 -->
-        <section id="menu2" class="section">
-            <h2>Mes valeurs</h2>
-            <p>Voici le contenu du menu 2. Ajoutez ici votre contenu.</p>
-        </section>
-        <!-- Section liée à Menu 3 -->
-        <section id="menu3" class="section">
-            <h2>Quelques projets</h2>
-            <p>Voici le contenu du menu 3. Ajoutez ici votre contenu.</p>
-        </section>
-        <!-- Section liée à Menu 4 -->
-        <section id="menu4" class="section">
-            <h2>Me contacter</h2>
-            <p>Voici le contenu du menu 4. Ajoutez ici votre contenu.</p>
-        </section>
-    </main>
+    <!-- Bouton Menu en haut à gauche -->
+    <div class="menu-button">
+        <button id="menu-btn">☰ Menu</button> <!-- Bouton pour ouvrir/fermer le menu -->
+    </div>
 
-    <!-- Inclusion du fichier JavaScript -->
-    <script src="javascript/scripts.js"></script>
+    <!-- Conteneur principal de la page d'accueil -->
+    <div id="content-container">
+        <!-- Contenu de la page d'accueil, initialement chargé avec home-content.html -->
+    </div>
+
+    <script src="js/script.js"></script> <!-- Inclusion du fichier JavaScript -->
 </body>
 </html>
