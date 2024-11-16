@@ -1,33 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Charger le contenu de la page d'accueil au démarrage
-    fetch('home-content/home-content.html')
+// Fonction pour charger un menu dans la page principale
+function loadMenu(menuFile) {
+    fetch(menuFile)
         .then(response => response.text())
-        .then(data => {
-            document.getElementById('home-content').innerHTML = data;
+        .then(html => {
+            // Charger le contenu du menu dans la page principale
+            document.getElementById('content-container').innerHTML = html;
         })
-        .catch(error => console.error("Erreur lors du chargement du contenu :", error));
-
-    // Fonction pour charger le contenu des menus
-    const menuButtons = document.querySelectorAll('.menu');
-    menuButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const menuFile = button.getAttribute('data-menu');
-            loadMenuContent(menuFile);
+        .catch(error => {
+            console.error('Erreur de chargement du menu:', error);
         });
-    });
+}
 
-    // Fonction pour charger le contenu d'un menu
-    function loadMenuContent(menuFile) {
-        fetch(`menus/${menuFile}`)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('home-content').innerHTML = data;
-            })
-            .catch(error => console.error("Erreur lors du chargement du menu :", error));
+// Fonction pour afficher/masquer le menu en haut à gauche
+function toggleMenu() {
+    let menu = document.getElementById("menu-container");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
     }
-
-    // Fonction pour afficher/masquer le menu
-    document.getElementById("menu-btn").addEventListener("click", function() {
-        alert("Menu cliqué ! (Fonction à implémenter)");
-    });
-});
+}

@@ -21,27 +21,26 @@
             <!-- <h1>Mon site perma</h1> -->
         </header>
 
-    <!-- Bouton Menu en haut à gauche -->
-    <div class="menu-button">
-        <button id="menu-btn">☰ Menu</button> <!-- Bouton pour ouvrir/fermer le menu -->
-    </div>
-
-    <!-- Conteneur principal de la page d'accueil -->
+    <!-- Contenu principal de la page d'accueil -->
     <div id="content-container">
-        <!-- Chargement dynamique du contenu de la page d'accueil depuis un autre fichier HTML -->
-        <div id="home-content"></div>
-
-        <!-- Section de menus autour de l'image -->
+        <h1>Bienvenue sur la page d'accueil !</h1>
+        
+        <!-- Image d'accueil au centre de la page -->
         <div class="image-container">
-            <img src="images/page_accueil2.jpeg" alt="Image d'accueil" class="home-image">
+            <img src="images/banniere2.jpeg" alt="Image d'accueil" class="home-image">
+            
+            <!-- Les menus sont autour de l'image -->
             <div class="menu-container">
-                <div class="menu menu1" data-menu="menus/menu1.html">Menu 1</div>
-                <div class="menu menu2" data-menu="menus/menu2.html">Menu 2</div>
-                <div class="menu menu3" data-menu="menus/menu3.html">Menu 3</div>
-                <div class="menu menu4" data-menu="menus/menu4.html">Menu 4</div>
+                <div class="menu" id="menu1" onclick="loadMenu('menu1.html')">Menu 1</div>
+                <div class="menu" id="menu2" onclick="loadMenu('menu2.html')">Menu 2</div>
+                <div class="menu" id="menu3" onclick="loadMenu('menu3.html')">Menu 3</div>
+                <div class="menu" id="menu4" onclick="loadMenu('menu4.html')">Menu 4</div>
             </div>
         </div>
     </div>
+
+    <!-- Bouton menu pour charger un menu -->
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
 
     <script src="js/script.js"></script> <!-- Inclusion du fichier JavaScript -->
 </body>

@@ -6,42 +6,49 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    max-width: 1200px;
+    height: 100vh; /* S'assure que le conteneur occupe toute la hauteur de la fenêtre */
     position: relative;
-    margin-top: 250px; /* Décalage pour éviter la bannière fixe */
 }
 
 /* Image d'accueil */
 .image-container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 20px;
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
 }
 
 .home-image {
-    max-width: 80%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Style pour le bouton "Retour à la page d'accueil" */
-.back-home-btn {
-    background-color: #4CAF50; /* Couleur du bouton */
+/* Style des menus autour de l'image */
+.menu-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu {
+    width: 150px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #4CAF50; /* Couleur du fond du menu */
     color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    text-align: center;
     cursor: pointer;
-    margin-top: 20px;
 }
 
-/* Effet au survol du bouton */
-.back-home-btn:hover {
-    background-color: #45a049;
+.menu:hover {
+    opacity: 0.9;
 }

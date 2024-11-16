@@ -2,15 +2,14 @@
 @media (max-width: 768px) {
     .menu-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .menu {
-        width: 80%; /* Les menus seront plus larges sur les petits écrans */
+        width: 80%;
+        margin-bottom: 10px;
     }
 
-    /* Ajuster la taille de la bannière pour les petits écrans */
-    .banner {
-        height: 150px;
+    .home-image {
+        max-width: 90%;
     }
 }
