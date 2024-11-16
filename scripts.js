@@ -5,7 +5,9 @@ const sections = document.querySelectorAll('.section');
 
 // Ajouter un écouteur d'événement à chaque lien
 menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+
         const targetId = link.getAttribute('data-target'); // Obtenir l'ID cible
 
         // Désactiver toutes les sections
