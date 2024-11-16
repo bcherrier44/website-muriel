@@ -1,53 +1,83 @@
-/* Style du bouton Menu en haut à gauche */
-.menu-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #2196F3;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 15; /* Placer le bouton au-dessus de la bannière */
-}
-
-.menu-button button {
-    background: none;
-    color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Menu Container */
+/* Conteneur des menus */
 .menu-container {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-between;
-    width: 90%; /* Réduit l'espace entre les menus */
-    z-index: 1;
-    margin-top: 20px; /* Espacement entre l'image et les menus */
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-/* Style de chaque menu */
+/* Positionnement des menus dans les coins */
 .menu {
-    width: 120px;
-    padding: 20px;
+    width: 150px;
+    height: 60px;
+    padding: 10px;
     border-radius: 15px;
-    margin: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #4CAF50; /* Fond par défaut */
     color: white;
+    text-align: center;
     cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
 }
 
-/* Position des menus */
-.menu1 { position: absolute; top: 0; left: 0; background-color: #4CAF50; } /* En haut à gauche */
-.menu2 { position: absolute; top: 0; right: 0; background-color: #2196F3; } /* En haut à droite */
-.menu3 { position: absolute; bottom: 0; left: 0; background-color: #FF5722; } /* En bas à gauche */
-.menu4 { position: absolute; bottom: 0; right: 0; background-color: #FFC107; } /* En bas à droite */
-
-/* Menu au survol : effet d'opacité */
 .menu:hover {
     opacity: 0.9;
 }
+
+/* Menu 1 : en haut à gauche */
+.top-left {
+    top: 10%;
+    left: 10%;
+    background-color: #4CAF50; /* Vert */
+}
+
+/* Menu 2 : en haut à droite */
+.top-right {
+    top: 10%;
+    right: 10%;
+    background-color: #FF5722; /* Orange */
+}
+
+/* Menu 3 : en bas à gauche */
+.bottom-left {
+    bottom: 10%;
+    left: 10%;
+    background-color: #2196F3; /* Bleu */
+}
+
+/* Menu 4 : en bas à droite */
+.bottom-right {
+    bottom: 10%;
+    right: 10%;
+    background-color: #9C27B0; /* Violet */
+}
+
+/* Bouton Menu en haut à gauche (arrondi) */
+.menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Arrondi du bouton */
+    width: 50px;
+    height: 50px;
+}
+
+.menu-btn:hover {
+    background-color: #444;
+}
+
+

@@ -1,5 +1,6 @@
 /* responsive.css */
 
+/* Style pour les écrans mobiles */
 @media (max-width: 768px) {
     .menu-container {
         flex-direction: column;
@@ -8,8 +9,9 @@
     }
 
     .menu {
-        width: 80%;
-        margin-bottom: 10px;
+        width: 70%;
+        height: 80px;
+        margin-bottom: 15px;
     }
 
     .home-image {
