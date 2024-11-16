@@ -12,6 +12,16 @@
     position: relative;
 }
 
+/* Titre de la page d'accueil */
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
 /* Conteneur de l'image */
 .image-container {
     display: flex;
@@ -30,4 +40,3 @@
     margin: 0 auto;
     max-height: 500px; /* Reduit la hauteur maximale de l'image */
 }
-

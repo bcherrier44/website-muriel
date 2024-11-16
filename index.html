@@ -13,8 +13,16 @@
 </head>
 <body>
 
-    <!-- Bouton Menu en haut à gauche -->
+    <!-- Bouton Menu en haut à gauche (arrondi) -->
     <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+
+    <!-- Menu déroulant -->
+    <div id="dropdown-menu" class="dropdown-content">
+        <a href="#" onclick="loadMenu('menus/menu1.html')">Menu 1</a>
+        <a href="#" onclick="loadMenu('menus/menu2.html')">Menu 2</a>
+        <a href="#" onclick="loadMenu('menus/menu3.html')">Menu 3</a>
+        <a href="#" onclick="loadMenu('menus/menu4.html')">Menu 4</a>
+    </div>
 
     <!-- Contenu principal de la page d'accueil -->
     <div id="content-container">

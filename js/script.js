@@ -11,15 +11,12 @@ function loadMenu(menuFile) {
         });
 }
 
-// Fonction pour afficher/masquer le menu en haut à gauche
+// Fonction pour afficher/masquer le menu en haut à gauche (menu déroulant)
 function toggleMenu() {
-    let menuContainer = document.querySelector('.menu-container');
-    if (menuContainer.style.display === "block") {
-        menuContainer.style.display = "none";
-    } else {
-        menuContainer.style.display = "flex";
-    }
+    var menu = document.getElementById('dropdown-menu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
 }
+
 
 // Fonction pour revenir à la page d'accueil
 function goHome() {
