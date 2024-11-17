@@ -28,7 +28,7 @@ function loadMenu(menuPath) {
 
 // Fonction pour charger la page d'accueil
 function loadHome() {
-    fetch('home-content/home.html')
+    fetch('home-content/home-content.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erreur HTTP ! statut: ${response.status}`);
