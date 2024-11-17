@@ -86,7 +86,7 @@
 
 /* Survol du bouton menu */
 .menu-btn:hover {
-    background-color: #444;
+    background-color: #9dd89d;
 }
 
 /* Style du menu déroulant */
@@ -95,7 +95,7 @@
     position: absolute;
     top: 70px;
     left: 20px;
-    background-color: #333;
+    background-color: #8dc28d;
     padding: 10px;
     border-radius: 5px;
     z-index: 20;
@@ -110,5 +110,5 @@
 }
 
 #dropdown-menu a:hover {
-    background-color: #555;
+    background-color: #9dd89d;
 }
