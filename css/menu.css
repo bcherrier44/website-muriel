@@ -69,8 +69,8 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #90ee90;
-    color: white;
+    background-color: #8aff8a;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 15px 25px; /* Taille du bouton */
     font-size: 20px;
