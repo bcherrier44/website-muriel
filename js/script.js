@@ -60,3 +60,10 @@ function goHome() {
     // Revenir à la page d'accueil
     window.location.href = 'index.html';
 }
+
+// Ajout d'écouteurs sur les liens du menu
+document.querySelectorAll("#dropdown-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        closeMenu(); // Fermer le menu déroulant après clic
+    });
+});
