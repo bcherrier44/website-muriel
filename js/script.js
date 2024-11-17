@@ -18,6 +18,16 @@ function loadMenu(menuPath) {
         .catch(error => console.error('Error loading the menu:', error));
 }
 
+// Fonction pour charger la page d'accueil
+function loadHome() {
+    fetch('home-content/home.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the home page:', error));
+}
+
 // Fonction pour revenir à la page d'accueil
 function goHome() {
     // Revenir à la page d'accueil
