@@ -11,22 +11,43 @@ function toggleMenu() {
 // Fonction pour charger un menu spécifique
 function loadMenu(menuPath) {
     fetch(menuPath)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ! statut: ${response.status}`);
+            }
+            return response.text();
+        })        
         .then(data => {
             document.getElementById('content-container').innerHTML = data;
         })
-        .catch(error => console.error('Error loading the menu:', error));
+        .catch(error => {
+            console.error('Erreur lors du chargement du menu :', error);
+            alert("Impossible de charger ce menu.");
+        });
 }
 
 // Fonction pour charger la page d'accueil
 function loadHome() {
     fetch('home-content/home.html')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ! statut: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(data => {
             document.getElementById('content-container').innerHTML = data;
         })
-        .catch(error => console.error('Error loading the home page:', error));
+        .catch(error => {
+            console.error('Erreur lors du chargement de la page d’accueil :', error);
+            alert("Impossible de charger la page d'accueil.");
+        });
 }
+
+// Chargement initial de la page d'accueil
+document.addEventListener('DOMContentLoaded', () => {
+    loadHome();
+});
 
 // Fonction pour revenir à la page d'accueil
 function goHome() {
