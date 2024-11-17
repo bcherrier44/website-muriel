@@ -1,3 +1,19 @@
-<div class="image-container">
-    <img src="images/page_accueil2.jpeg" alt="Image d'Accueil" class="home-image">
-</div>
+    <!-- Contenu principal de la page d'accueil -->
+    <div id="content-container">
+        <h1>Bienvenue sur la page d'accueil !</h1>
+
+        <!-- Image d'accueil au centre de la page -->
+        <div class="image-container">
+            <img src="images/banniere.jpeg" alt="Image d'accueil" class="home-image">
+
+        
+            <!-- Les menus sont autour de l'image -->
+            <div class="menu-container">
+                <!-- Boutons de menus positionnés dans les coins -->
+                <div class="menu top-left" id="menu1" onclick="loadMenu('menus/menu1.html')">Qui suis-je</div>
+                <div class="menu top-right" id="menu2" onclick="loadMenu('menus/menu2.html')">Mes valeurs</div>
+                <div class="menu bottom-left" id="menu3" onclick="loadMenu('menus/menu3.html')">Mes projets</div>
+                <div class="menu bottom-right" id="menu4" onclick="loadMenu('menus/menu4.html')">Me contacter</div>
+            </div>
+        </div>
+    </div>
