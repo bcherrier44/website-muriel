@@ -8,6 +8,12 @@ function toggleMenu() {
     }
 }
 
+// Fonction pour fermer le menu déroulant
+function closeMenu() {
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    dropdownMenu.style.display = "none";
+}
+
 // Fonction pour charger un menu spécifique
 function loadMenu(menuPath) {
     fetch(menuPath)
