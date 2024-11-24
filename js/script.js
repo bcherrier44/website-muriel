@@ -55,10 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHome();
 });
 
-// Fonction pour revenir à la page d'accueil
-function goHome() {
+/* Fonction pour revenir à la page d'accueil */
+/* function goHome() {
     // Revenir à la page d'accueil
     window.location.href = 'index.html';
+} */
+
+/* Fonction pour revenir à la page d'accueil */
+function goHome() {
+    // Charge la page d'accueil dynamiquement
+    fetch('home-content/home-content.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('main-content').innerHTML = html;
+    
+            // Cache le menu déroulant si nécessaire
+            const dropdownMenu = document.querySelector('.dropdown-content');
+            if (dropdownMenu) {
+                dropdownMenu.style.display = 'none';
+            }
+        })
+        .catch(error => console.error('Erreur lors du retour à la page d\'accueil :', error));
 }
 
 // Ajout d'écouteurs sur les liens du menu

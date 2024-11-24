@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    position: relative;
 }
 
 /* Boîte contenant le titre */
@@ -44,6 +46,8 @@
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
+    max-width: 90%; /* Empêche le texte de dépasser */
+    word-wrap: break-word; /* Gère les retours à la ligne si besoin */
 }
 
 /* Images spécifiques pour chaque menu */
@@ -69,4 +73,31 @@
     font-family: 'Ryman Eco', sans-serif;
     font-size: 18px;
     color: #333;
+}
+
+/* Bouton retour à l'accueil */
+.menu-back-button button {
+    background-color: rgb(65, 126, 67);
+    border: none;
+    border-radius: 50px; /* Bouton arrondi */
+    color: white;
+    font-size: 16px;
+    font-family: 'Ryman Eco', sans-serif;
+    padding: 10px 20px; /* Taille du bouton */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Effet hover sur le bouton */
+.menu-back-button button:hover {
+    background-color: rgb(82, 160, 85); /* Vert un peu plus foncé */
+    transform: scale(1.05); /* Légère mise en avant */
+}
+
+/* Centrer le bouton sur la page */
+.menu-back-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
 }
