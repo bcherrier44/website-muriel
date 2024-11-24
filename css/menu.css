@@ -11,8 +11,9 @@
     height: 100%;
 }
 
-/* Positionnement des menus autour de l'image */
+/* Gestion des Menus autour de l'image centrale */
 .menu {
+    font-family: 'Ryman Eco', sans-serif;
     width: 150px;
     height: 60px;
     padding: 10px;
@@ -37,7 +38,7 @@
     position: absolute;
     top: -40px;
     left: -40px;
-    background-color: #4CAF50; /* Vert */
+    background-color: rgb(30, 99, 32); /* Vert */
 }
 
 /* Menu 2 : en haut à droite */
@@ -45,7 +46,7 @@
     position: absolute;
     top: -40px;
     right: -40px;
-    background-color: #FF5722; /* Orange */
+    background-color: rgb(187, 111, 88); /* Orange */
 }
 
 /* Menu 3 : en bas à gauche */
@@ -53,7 +54,7 @@
     position: absolute;
     bottom: -40px;
     left: -40px;
-    background-color: #2196F3; /* Bleu */
+    background-color: rgb(40, 84, 119); /* Bleu */
 }
 
 /* Menu 4 : en bas à droite */
@@ -61,15 +62,16 @@
     position: absolute;
     bottom: -40px;
     right: -40px;
-    background-color: #9C27B0; /* Violet */
+    background-color: rgb(85, 81, 81); /* Violet */
 }
 
-/* Bouton Menu en haut à gauche (arrondi) */
+/* Bouton Menu déroulant en haut à gauche (arrondi) */
 .menu-btn {
+    font-family: 'Ryman Eco', sans-serif;
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #8dc28d;
+    background-color: rgb(60, 134, 63);
     color: rgb(0, 0, 0);
     border: none;
     padding: 15px 25px; /* Taille du bouton */
@@ -84,18 +86,19 @@
     transition: background-color 0.3s;
 }
 
-/* Survol du bouton menu */
+/* Survol du bouton menu déroulant */
 .menu-btn:hover {
-    background-color: #9dd89d;
+    background-color: rgb(100, 200, 100);
 }
 
 /* Style du menu déroulant */
 #dropdown-menu {
+    font-family: 'Ryman Eco', sans-serif;
     display: none;
     position: absolute;
     top: 70px;
     left: 20px;
-    background-color: #8dc28d;
+    background-color: rgb(60, 134, 63);
     padding: 10px;
     border-radius: 5px;
     z-index: 20;
@@ -110,5 +113,5 @@
 }
 
 #dropdown-menu a:hover {
-    background-color: #9dd89d;
+    background-color: rgb(100, 200, 100);
 }

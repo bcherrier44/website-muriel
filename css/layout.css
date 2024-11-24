@@ -14,12 +14,13 @@
 
 /* Titre de la page d'accueil */
 h1 {
+    font-family: 'Ryman Eco', sans-serif;
     position: absolute;
     top: 20px;
     width: 100%;
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: rgb(51, 51, 51);
 }
 
 /* Conteneur de l'image */
